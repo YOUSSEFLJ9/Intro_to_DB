@@ -1,8 +1,8 @@
-CREAT DATA IF NOT EXISTS db_alx_book_store;
+CREATE DATABASE IF NOT EXISTS db_alx_book_store;
 
 USE db_alx_book_store;
 
-CREAT TABLE IF NOT EXISTS Books (
+CREATE TABLE IF NOT EXISTS Books (
 
     book_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(130),
@@ -10,27 +10,27 @@ CREAT TABLE IF NOT EXISTS Books (
     price DOUBLE,
     publication_date DATE
 );
-CREAT TABLE IF NOT EXISTS Authors (
+CREATE TABLE IF NOT EXISTS Authors (
 
     author_id INT PRIMARY KEY AUTO_INCREMENT,
     author_name VARCHAR(215)
 );
 
-CREAT TABLE IF NOT EXISTS Customers (
+CREATE TABLE IF NOT EXISTS Customers (
 
     customer_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_name VARCHAR(215),
     email VARCHAR(255),
     address TEXT
 );
-CREAT TABLE IF NOT EXISTS Orders (
+CREATE TABLE IF NOT EXISTS Orders (
 
     order_id INT PRIMARY KEY AUTO_INCREMENT,
     customer_id INT FOREIGN KEY REFERENCES Customers(customer_id),
     order_date DATE
 );
 
-CREAT TABLE IF NOT EXISTS Order_Items (
+CREATE TABLE IF NOT EXISTS Order_Items (
 
     orderdetailid INT PRIMARY KEY AUTO_INCREMENT,
     order_id INT FOREIGN KEY REFERENCES Orders(order_id),
