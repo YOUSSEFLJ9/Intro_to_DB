@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS Orders (
     order_date DATE
 );
 
-CREATE TABLE IF NOT EXISTS Order_Items (
+CREATE TABLE IF NOT EXISTS Order_Details (
 
     orderdetailid INT PRIMARY KEY AUTO_INCREMENT,
     order_id INT,
